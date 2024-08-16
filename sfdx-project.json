@@ -1,0 +1,19 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "package": "NylasApexSDK",
+      "versionName": "ver 1.0.0.0",
+      "versionNumber": "1.0.0.0",
+      "default": true,
+      "versionDescription": "Initial beta release of Nylas Apex SDK. This includes some useful Nylas Admin endpoints, but is not yet feature complete. DO NOT USE IN PRODUCTION APPLICATIONS."
+    }
+  ],
+  "name": "Nylas_Apex_SDK",
+  "namespace": "nylas",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "61.0",
+  "packageAliases": {
+    "NylasApexSDK": "0HoQk0000000317KAA"
+  }
+}
