@@ -23,6 +23,9 @@ public class Event {
         }
       }
     }
+
+    public Reminders(){
+    }
   }
 
   public class Details {
@@ -52,6 +55,9 @@ public class Event {
         }
       }
     }
+
+    public Details(){
+    }
   }
 
   public class Conferencing {
@@ -77,6 +83,9 @@ public class Event {
           }
         }
       }
+    }
+
+    public Conferencing(){
     }
   }
 
@@ -104,6 +113,9 @@ public class Event {
         }
       }
     }
+
+    public Organizer(){
+    }
   }
 
   public class Overrides {
@@ -129,6 +141,9 @@ public class Event {
           }
         }
       }
+    }
+
+    public Overrides(){
     }
   }
 
@@ -165,6 +180,9 @@ public class Event {
         }
       }
     }
+
+    public Participants() {
+    }
   }
 
   public class When_Z {
@@ -196,6 +214,9 @@ public class Event {
           }
         }
       }
+    }
+
+    public When_Z(){
     }
   }
 
@@ -278,6 +299,9 @@ public class Event {
         }
       }
     }
+  }
+
+  public Event(){
   }
 
   public static void consumeObject(System.JSONParser parser) {

@@ -4,6 +4,7 @@
  * @last modified on  : 08-16-2024
  * @last modified by  : Lincoln Rychecky
  **/
+
 public class NylasAPIV3Client {
   // CALENDAR ENDPOINTS (https://developer.nylas.com/docs/api/v3/ecc/#tag--Calendar)
   public class ReturnAllCalendarsParams {
@@ -392,6 +393,7 @@ public class NylasAPIV3Client {
 
   public static CreateEventResponse createEvent(
     String grantID,
+    Event data,
     CreateEventParams params
   ) {
     // Define the endpoint URL
@@ -418,6 +420,9 @@ public class NylasAPIV3Client {
       url
     );
 
+    // serialize data into a JSON string
+    req.setBody(JSON.serialize(data));
+
     try {
       Http http = new Http();
       HTTPResponse res = http.send(req);
@@ -440,6 +445,7 @@ public class NylasAPIV3Client {
     public String calendar_id;
     public String fieldSelect;
   }
+
   public static ReturnEventResponse returnEvent(
     String grantID,
     String eventID,
@@ -1047,7 +1053,7 @@ public class NylasAPIV3Client {
     }
   }
 
-  public static ReturnScheduledMessagesResponse returnScheduledMessages(
+  public static List<nylas.ScheduledMessage> returnScheduledMessages(
     String grantID
   ) {
     // Define the endpoint URL

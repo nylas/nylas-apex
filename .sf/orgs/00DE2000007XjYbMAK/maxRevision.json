@@ -1,0 +1,335 @@
+{
+    "serverMaxRevisionCounter": 978,
+    "sourceMembers": {
+        "Profile__Admin": {
+            "serverRevisionCounter": 627,
+            "lastRetrievedFromServer": null,
+            "memberType": "Profile",
+            "isNameObsolete": false
+        },
+        "CustomField__Nylas_V3_Setting__mdt.Callback_URI__c": {
+            "serverRevisionCounter": 478,
+            "lastRetrievedFromServer": 478,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Nylas_V3_Setting__mdt.Client_ID__c": {
+            "serverRevisionCounter": 479,
+            "lastRetrievedFromServer": 479,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Nylas_V3_Setting__mdt.Nylas_API_Secret__c": {
+            "serverRevisionCounter": 480,
+            "lastRetrievedFromServer": 480,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Nylas_V3_Setting__mdt.Region__c": {
+            "serverRevisionCounter": 481,
+            "lastRetrievedFromServer": 481,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomMetadata__Nylas_V3_Setting.System_Config": {
+            "serverRevisionCounter": 482,
+            "lastRetrievedFromServer": 482,
+            "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        },
+        "ApexClass__Calendar": {
+            "serverRevisionCounter": 864,
+            "lastRetrievedFromServer": 864,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__CancelScheduledMessageResponse": {
+            "serverRevisionCounter": 484,
+            "lastRetrievedFromServer": 484,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__CleanEmailMessagesResponse": {
+            "serverRevisionCounter": 926,
+            "lastRetrievedFromServer": 926,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ConnectorCredential": {
+            "serverRevisionCounter": 486,
+            "lastRetrievedFromServer": 486,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__CreateCalendarResponse": {
+            "serverRevisionCounter": 487,
+            "lastRetrievedFromServer": 487,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__CreateCredentialResponse": {
+            "serverRevisionCounter": 488,
+            "lastRetrievedFromServer": 488,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__CreateEventResponse": {
+            "serverRevisionCounter": 489,
+            "lastRetrievedFromServer": 489,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DeleteCalendarResponse": {
+            "serverRevisionCounter": 490,
+            "lastRetrievedFromServer": 490,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DeleteCredentialResponse": {
+            "serverRevisionCounter": 491,
+            "lastRetrievedFromServer": 491,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DeleteEventResponse": {
+            "serverRevisionCounter": 492,
+            "lastRetrievedFromServer": 492,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DeleteGrantResponse": {
+            "serverRevisionCounter": 493,
+            "lastRetrievedFromServer": 493,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DeleteMessageResponse": {
+            "serverRevisionCounter": 494,
+            "lastRetrievedFromServer": 494,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__Event": {
+            "serverRevisionCounter": 893,
+            "lastRetrievedFromServer": 893,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__GetCredentialResponse": {
+            "serverRevisionCounter": 496,
+            "lastRetrievedFromServer": 496,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__GetCurrentGrantResponse": {
+            "serverRevisionCounter": 609,
+            "lastRetrievedFromServer": 609,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__GetGrantResponse": {
+            "serverRevisionCounter": 598,
+            "lastRetrievedFromServer": 598,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__Grant": {
+            "serverRevisionCounter": 499,
+            "lastRetrievedFromServer": 499,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ListCredentialsResponse": {
+            "serverRevisionCounter": 500,
+            "lastRetrievedFromServer": 500,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ListGrantsResponse": {
+            "serverRevisionCounter": 501,
+            "lastRetrievedFromServer": 501,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__Message": {
+            "serverRevisionCounter": 502,
+            "lastRetrievedFromServer": 502,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__Metadata": {
+            "serverRevisionCounter": 503,
+            "lastRetrievedFromServer": 503,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasAPIException": {
+            "serverRevisionCounter": 504,
+            "lastRetrievedFromServer": 504,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasAPIV3AdminClient": {
+            "serverRevisionCounter": 977,
+            "lastRetrievedFromServer": 977,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasAPIV3AdminClientTest": {
+            "serverRevisionCounter": 978,
+            "lastRetrievedFromServer": 978,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasAPIV3Client": {
+            "serverRevisionCounter": 972,
+            "lastRetrievedFromServer": 972,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasConfig": {
+            "serverRevisionCounter": 508,
+            "lastRetrievedFromServer": 508,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasHTTPMock": {
+            "serverRevisionCounter": 969,
+            "lastRetrievedFromServer": 969,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasHTTPUtility": {
+            "serverRevisionCounter": 510,
+            "lastRetrievedFromServer": 510,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnAllCalendarsResponse": {
+            "serverRevisionCounter": 853,
+            "lastRetrievedFromServer": 853,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnAllEventsResponse": {
+            "serverRevisionCounter": 512,
+            "lastRetrievedFromServer": 512,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnAllMessagesResponse": {
+            "serverRevisionCounter": 513,
+            "lastRetrievedFromServer": 513,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnCalendarResponse": {
+            "serverRevisionCounter": 514,
+            "lastRetrievedFromServer": 514,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnEventResponse": {
+            "serverRevisionCounter": 515,
+            "lastRetrievedFromServer": 515,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnMessageResponse": {
+            "serverRevisionCounter": 516,
+            "lastRetrievedFromServer": 516,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ReturnScheduledMessagesResponse": {
+            "serverRevisionCounter": 957,
+            "lastRetrievedFromServer": 957,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ScheduledMessage": {
+            "serverRevisionCounter": 518,
+            "lastRetrievedFromServer": 518,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__SendMessageResponse": {
+            "serverRevisionCounter": 519,
+            "lastRetrievedFromServer": 519,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__SendRSVPResponse": {
+            "serverRevisionCounter": 913,
+            "lastRetrievedFromServer": 913,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TokenExchangeResponse": {
+            "serverRevisionCounter": 521,
+            "lastRetrievedFromServer": 521,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TokenInfoResponse": {
+            "serverRevisionCounter": 522,
+            "lastRetrievedFromServer": 522,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UpdateCalendarResponse": {
+            "serverRevisionCounter": 523,
+            "lastRetrievedFromServer": 523,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UpdateCredentialResponse": {
+            "serverRevisionCounter": 524,
+            "lastRetrievedFromServer": 524,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UpdateEventResponse": {
+            "serverRevisionCounter": 525,
+            "lastRetrievedFromServer": 525,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UpdateGrantResponse": {
+            "serverRevisionCounter": 606,
+            "lastRetrievedFromServer": 606,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UpdateMessageAttributesResponse": {
+            "serverRevisionCounter": 527,
+            "lastRetrievedFromServer": 527,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "CustomObject__Nylas_V3_Setting__mdt": {
+            "serverRevisionCounter": 528,
+            "lastRetrievedFromServer": 528,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "RemoteSiteSetting__NylasV3eu": {
+            "serverRevisionCounter": 529,
+            "lastRetrievedFromServer": 529,
+            "memberType": "RemoteSiteSetting",
+            "isNameObsolete": false
+        },
+        "RemoteSiteSetting__NylasV3us": {
+            "serverRevisionCounter": 530,
+            "lastRetrievedFromServer": 530,
+            "memberType": "RemoteSiteSetting",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasAPIV3ClientTest": {
+            "serverRevisionCounter": 973,
+            "lastRetrievedFromServer": 973,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        }
+    }
+}

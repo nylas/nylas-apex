@@ -3,17 +3,16 @@
     {
       "path": "force-app",
       "package": "NylasApexSDK",
-      "versionName": "ver 1.0.0.0",
-      "versionNumber": "1.0.0.0",
-      "default": true,
-      "versionDescription": "Initial beta release of Nylas Apex SDK. This includes some useful Nylas Admin endpoints, but is not yet feature complete. DO NOT USE IN PRODUCTION APPLICATIONS."
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": "Devlop with Nylas API V3 using the Apex language. This package contains client code for simple configuration of the Nylas API and use of the various routes."
     }
   ],
-  "name": "Nylas_Apex_SDK",
+  "name": "NylasApexSDK",
   "namespace": "nylas",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "61.0",
   "packageAliases": {
-    "NylasApexSDK": "0HoQk0000000317KAA"
+    "NylasApexSDK": "0HoQk00000003CPKAY"
   }
 }
