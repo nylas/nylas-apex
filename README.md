@@ -4,6 +4,8 @@ This is the GitHub repository for the Nylas SDK for Apex. This repo is primarily
 
 ## ⚙️ Install
 
+The Nylas SDK for Apex is installed as an unlocked Salesforce package. Click the link below to install the SDK in your Salesforce instance and get started.
+
 [Package Installation Link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tQk000000JISfIAO)
 
 ## ⚡️Usage
