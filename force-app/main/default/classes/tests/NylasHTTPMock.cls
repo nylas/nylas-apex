@@ -328,7 +328,7 @@ public class NylasHTTPMock {
           // https://developer.nylas.com/docs/api/v3/ecc/#delete-/v3/grants/-grant_id-/messages/schedules/-scheduleId-
           else if (matchesScheduledMessageIDPattern(requestEndpoint)) {
             res.setBody(
-              '{ "Succesfully Request Schedule Deletion": { "value": { "request_id": "9c2ce8cd-d6e0-4206-a1d0-703f16880061", "data": { "message": "requested cancelation for workflow" }}}}'
+              '{"request_id": "9c2ce8cd-d6e0-4206-a1d0-703f16880061","data": {"message": "requested cancelation for workflow"}}'
             );
             res.setStatusCode(202);
           }
@@ -384,7 +384,7 @@ public class NylasHTTPMock {
 
     private Boolean matchesMessageIDPattern(String url) {
       // Define the regular expression pattern
-      String pattern = '^/v3/grants/[a-zA-Z0-9-]+/messages/[a-zA-Z0-9-]+$';
+      String pattern = '^/v3/grants/[a-zA-Z0-9-]+/messages/[a-zA-Z0-9-]*-[a-zA-Z0-9-]*$';
 
       return nylasMock.compileMatchRegex(pattern, url);
     }
@@ -398,7 +398,7 @@ public class NylasHTTPMock {
 
     private Boolean matchesSendMessage(String url) {
       // Define the regular expression pattern
-      String pattern = '^/v3/grants/[a-zA-Z0-9-]+/messages/[a-zA-Z0-9-]+/send$';
+      String pattern = '^/v3/grants/[a-zA-Z0-9-]+/messages/send$';
 
       return nylasMock.compileMatchRegex(pattern, url);
     }

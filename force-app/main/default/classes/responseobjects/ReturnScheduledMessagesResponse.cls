@@ -3,12 +3,10 @@
 //
 
 public class ReturnScheduledMessagesResponse {
-  List<ScheduledMessage> data;
-
-  public static ReturnScheduledMessagesResponse parse(String json) {
-    return (ReturnScheduledMessagesResponse) System.JSON.deserialize(
+  public static List<ScheduledMessage> parse(String json) {
+    return (List<ScheduledMessage>) System.JSON.deserialize(
       json,
-      ReturnScheduledMessagesResponse.class
+      List<ScheduledMessage>.class
     );
   }
 }

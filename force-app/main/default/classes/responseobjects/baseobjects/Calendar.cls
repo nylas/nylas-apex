@@ -53,6 +53,9 @@ public class Calendar {
     }
   }
 
+  public Calendar() {
+  }
+
   public static void consumeObject(System.JSONParser parser) {
     Integer depth = 0;
     do {

@@ -5,14 +5,14 @@
  * @last modified by  : Lincoln Rychecky
  **/
 public class NylasAPIV3AdminClient {
-  private Nylas_V3_Setting__mdt nylasSettings = NylasConfig.getNylasConfig()
+  private static Nylas_V3_Setting__mdt nylasSettings = NylasConfig.getNylasConfig()
     .nylasSettings;
 
   // the base url for the Nylas API ('https://api.us.nylas.com' or 'https://api.eu.nylas.com')
   private static String baseURL = nylasSettings.Region__c == 'US' ||
-  nylasSettings.Region__c == null
-  ? 'https://api.us.nylas.com'
-  : 'https://api.eu.nylas.com';
+    nylasSettings.Region__c == null
+    ? 'https://api.us.nylas.com'
+    : 'https://api.eu.nylas.com';
 
   // Define the endpoint URL
   private static String clientId = nylasSettings.Client_ID__c;
@@ -173,58 +173,54 @@ public class NylasAPIV3AdminClient {
   public static String getHostedAuthEndpoint(
     GetHostedAuthEndpointParams params
   ) {
-    // Map to hold all parameters
-    Map<String, String> paramsMap = new Map<String, String>();
-
-    // Add required parameters
-    paramsMap.put('client_id', clientId);
-    paramsMap.put('redirect_uri', redirectURI);
-    paramsMap.put('response_type', 'code');
+    // Define the endpoint URL
+    String endpointUrl =
+      baseURL +
+      '/v3/connect/auth?client_id=' +
+      clientId +
+      '&redirect_uri=' +
+      redirectURI +
+      '&response_type=code';
 
     // Add optional parameters if they are not null
     if (params.provider != '') {
-      paramsMap.put('provider', params.provider);
+      endpointUrl +=
+        '&provider=' + EncodingUtil.urlEncode(params.provider, 'UTF-8');
     }
     if (params.scope != '') {
-      paramsMap.put('scope', params.scope);
+      endpointUrl += '&scope=' + EncodingUtil.urlEncode(params.scope, 'UTF-8');
     }
     if (params.prompt != '') {
-      paramsMap.put('prompt', params.prompt);
+      endpointUrl +=
+        '&prompt=' + EncodingUtil.urlEncode(params.prompt, 'UTF-8');
     }
     if (params.state != '') {
-      paramsMap.put('state', params.state);
+      endpointUrl += '&state=' + EncodingUtil.urlEncode(params.state, 'UTF-8');
     }
     if (params.login_hint != '') {
-      paramsMap.put('login_hint', params.login_hint);
+      endpointUrl +=
+        '&login_hint=' + EncodingUtil.urlEncode(params.login_hint, 'UTF-8');
     }
     if (params.access_type != '') {
-      paramsMap.put('access_type', params.access_type);
+      endpointUrl +=
+        '&access_type=' + EncodingUtil.urlEncode(params.access_type, 'UTF-8');
     }
     if (params.code_challenge != '') {
-      paramsMap.put('code_challenge', params.code_challenge);
+      endpointUrl +=
+        '&code_challenge=' +
+        EncodingUtil.urlEncode(params.code_challenge, 'UTF-8');
     }
     if (params.code_challenge_method != '') {
-      paramsMap.put('code_challenge_method', params.code_challenge_method);
+      endpointUrl +=
+        '&code_challenge_method=' +
+        EncodingUtil.urlEncode(params.code_challenge_method, 'UTF-8');
     }
     if (params.credential_id != '') {
-      paramsMap.put('credential_id', params.credential_id);
+      endpointUrl +=
+        '&credential_id=' +
+        EncodingUtil.urlEncode(params.credential_id, 'UTF-8');
     }
 
-    // Construct the query string
-    String queryString = '';
-
-    for (String key : paramsMap.keySet()) {
-      if (queryString != '') {
-        queryString += '&';
-      }
-      queryString +=
-        key +
-        '=' +
-        EncodingUtil.urlEncode(paramsMap.get(key), 'UTF-8');
-    }
-
-    // Define the endpoint URL
-    String endpointUrl = baseURL + '/v3/connect/auth?' + queryString;
     return endpointUrl;
   }
 

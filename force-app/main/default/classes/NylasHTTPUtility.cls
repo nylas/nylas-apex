@@ -1,5 +1,5 @@
 public class NylasHTTPUtility {
-  private Nylas_V3_Setting__mdt nylasSettings = NylasConfig.getNylasConfig()
+  private static Nylas_V3_Setting__mdt nylasSettings = NylasConfig.getNylasConfig()
     .nylasSettings;
 
   // the base url for the Nylas API ('https://api.us.nylas.com' or 'https://api.eu.nylas.com')
