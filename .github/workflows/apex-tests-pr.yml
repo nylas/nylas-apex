@@ -11,15 +11,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '21.x'
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Install Salesforce CLI
-      uses: forcedotcom/sfdx-action@v1
-      with:
-        version: latest
+      run: |
+        npm install sfdx-cli
+        node_modules/sfdx-cli/bin/run --version
+        node_modules/sfdx-cli/bin/run plugins --core
 
     # Store Secret for debhub
     - name: Populate auth file with DEVHUB_SFDX_URL secrets
