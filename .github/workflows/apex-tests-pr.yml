@@ -1,0 +1,53 @@
+name: Salesforce CI
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+on:
+workflow_dispatch:
+  inputs:
+    branch:
+      description: 'Branch to run the tests on'
+      required: true
+      default: 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Salesforce CLI
+      uses: forcedotcom/sfdx-action@v1
+      with:
+        version: latest
+
+    # Store Secret for debhub
+    - name: Populate auth file with DEVHUB_SFDX_URL secrets
+      shell: bash
+      run: |
+        echo ${{ secrets.DEVHUB_SFDX_URL }} > ./DEVHUB_SFDX_URL.txt
+        secretFileSize=$(wc -c "./DEVHUB_SFDX_URL.txt" | awk '{print $1}')
+        if [ $secretFileSize == 1 ]; then
+          echo "DEVHUB_SFDX_URL secret is empty or not set. Is this workflow running on a fork? Exiting...";
+          exit 1;
+        fi
+
+    - name: Authenticate to Dev Hub
+      run: sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+
+    - name: Create Scratch Org
+      run: sfdx force:org:create -s -f config/project-scratch-def.json -a MyScratchOrg
+
+    - name: Push Source to Scratch Org
+      run: sfdx force:source:push -u MyScratchOrg
+
+    - name: Run Apex Tests
+      run: sfdx force:apex:test:run -u MyScratchOrg --wait 10 --resultformat human --codecoverage
