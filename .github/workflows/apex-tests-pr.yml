@@ -1,20 +1,12 @@
 name: Salesforce CI
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-
 on:
-workflow_dispatch:
-  inputs:
-    branch:
-      description: 'Branch to run the tests on'
-      required: true
-      default: 'main'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to run the tests on'
+        required: true
+        default: 'main'
 
 jobs:
   build:
