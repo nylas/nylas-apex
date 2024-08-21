@@ -31,6 +31,7 @@ public class NylasHTTPUtility {
     req.setMethod(method == HttpMethod.DEL ? 'DELETE' : method.name());
     req.setHeader('Content-Type', 'application/json');
     req.setHeader('Authorization', 'Bearer ' + nylasAPISecret);
+    req.setHeader('User-Agent', 'Nylas-SFDC-SDK-version');
 
     return req;
   }
@@ -49,6 +50,7 @@ public class NylasHTTPUtility {
     req.setMethod(method == HttpMethod.DEL ? 'DELETE' : method.name());
     req.setHeader('Content-Type', 'application/json');
     req.setHeader('Authorization', 'Bearer ' + customAuthToken);
+    req.setHeader('User-Agent', 'Nylas-SFDC-SDK-version');
 
     return req;
   }
