@@ -24,6 +24,7 @@ public class NylasHTTPUtility {
   public static HttpRequest newRequest(HttpMethod method, String url) {
     // Define the endpoint URL
     String endpointUrl = baseURL + url;
+    String versionNumber = PackageVersion.VERSION_NUMBER;
 
     // Make post request to the endpoint
     HttpRequest req = new HttpRequest();
@@ -31,7 +32,7 @@ public class NylasHTTPUtility {
     req.setMethod(method == HttpMethod.DEL ? 'DELETE' : method.name());
     req.setHeader('Content-Type', 'application/json');
     req.setHeader('Authorization', 'Bearer ' + nylasAPISecret);
-    req.setHeader('User-Agent', 'Nylas-SFDC-SDK-version');
+    req.setHeader('User-Agent', 'Nylas-SFDC-SDK v' + versionNumber);
 
     return req;
   }
