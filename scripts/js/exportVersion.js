@@ -20,7 +20,7 @@ const comment = `/**
  * @last modified by  : exportVersion.js
  **/
 `;
-const classStr = `public class PackageVersion {
+const classStr = `public class NylasVersion {
   public static final String VERSION_NUMBER = '${version}';
 }\n`;
 const output = comment + classStr;
