@@ -16,12 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Salesforce CLI
-        run: |
-          npm install sfdx-cli
-          node_modules/sfdx-cli/bin/run --version
-          node_modules/sfdx-cli/bin/run plugins --core
-
       # Store Secret for debhub
       - name: Populate auth file with DEVHUB_SFDX_URL secrets
         shell: bash
