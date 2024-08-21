@@ -4,9 +4,9 @@ public class NylasHTTPUtility {
 
   // the base url for the Nylas API ('https://api.us.nylas.com' or 'https://api.eu.nylas.com')
   private static String baseURL = nylasSettings.Region__c == 'US' ||
-  nylasSettings.Region__c == null
-  ? 'https://api.us.nylas.com'
-  : 'https://api.eu.nylas.com';
+    nylasSettings.Region__c == null
+    ? 'https://api.us.nylas.com'
+    : 'https://api.eu.nylas.com';
 
   private static String nylasAPISecret = nylasSettings.Nylas_API_Secret__c;
 
@@ -24,7 +24,7 @@ public class NylasHTTPUtility {
   public static HttpRequest newRequest(HttpMethod method, String url) {
     // Define the endpoint URL
     String endpointUrl = baseURL + url;
-    String versionNumber = PackageVersion.VERSION_NUMBER;
+    String versionNumber = NylasVersion.VERSION_NUMBER;
 
     // Make post request to the endpoint
     HttpRequest req = new HttpRequest();

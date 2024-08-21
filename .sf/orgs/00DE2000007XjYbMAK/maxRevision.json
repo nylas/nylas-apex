@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 978,
+    "serverMaxRevisionCounter": 984,
     "sourceMembers": {
         "Profile__Admin": {
             "serverRevisionCounter": 627,
@@ -200,8 +200,8 @@
             "isNameObsolete": false
         },
         "ApexClass__NylasHTTPUtility": {
-            "serverRevisionCounter": 510,
-            "lastRetrievedFromServer": 510,
+            "serverRevisionCounter": 983,
+            "lastRetrievedFromServer": 983,
             "memberType": "ApexClass",
             "isNameObsolete": false
         },
@@ -328,6 +328,12 @@
         "ApexClass__NylasAPIV3ClientTest": {
             "serverRevisionCounter": 973,
             "lastRetrievedFromServer": 973,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NylasVersion": {
+            "serverRevisionCounter": 984,
+            "lastRetrievedFromServer": 984,
             "memberType": "ApexClass",
             "isNameObsolete": false
         }
