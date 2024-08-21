@@ -4,7 +4,7 @@
       "path": "force-app",
       "package": "NylasApexSDK",
       "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionNumber": "0.1.1.0",
       "versionDescription": "Devlop with Nylas API V3 using the Apex language. This package contains client code for simple configuration of the Nylas API and use of the various routes."
     }
   ],
