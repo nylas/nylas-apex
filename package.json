@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Nylas Apex SDK",
   "scripts": {
+    "export-version": "node scripts/js/exportVersion.js",
     "lint": "eslint **/{aura,lwc}/**/*.js",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest",
@@ -12,6 +13,7 @@
     "test:unit:coverage": "sfdx-lwc-jest --coverage",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+    "prebuild": "npm run export-version",
     "postinstall": "husky install",
     "precommit": "lint-staged"
   },
