@@ -11,10 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '21.x'
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
