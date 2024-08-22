@@ -1,3 +1,4 @@
 {
-  "target-org": "Nylas_SDK_ORG"
+  "target-org": "Nylas_SDK_ORG",
+  "target-dev-hub": "DevHub"
 }
