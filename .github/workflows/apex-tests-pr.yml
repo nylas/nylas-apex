@@ -1,12 +1,9 @@
-name: Salesforce CI
+name: Salesforce CI - Build and Test Package on PR
 
 on:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch to run the tests on"
-        required: true
-        default: "main"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -19,9 +16,9 @@ jobs:
 
       - name: Install Salesforce CLI
         run: |
-          npm install sfdx-cli
-          node_modules/sfdx-cli/bin/run --version
-          node_modules/sfdx-cli/bin/run plugins --core
+          npm install --global sfdx-cli
+          sfdx --version
+          sfdx plugins --core
 
       - name: Checkout repository
         uses: actions/checkout@v2
