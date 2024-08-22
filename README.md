@@ -1,3 +1,5 @@
+[![Salesforce CI - Build and Test Package on PR](https://github.com/nylas/nylas-apex/actions/workflows/apex-tests-pr.yml/badge.svg?branch=main&event=check_suite)](https://github.com/nylas/nylas-apex/actions/workflows/apex-tests-pr.yml)
+
 # Nylas SDK for Apex
 
 This is the GitHub repository for the Nylas SDK for Apex. This repo is primarily for anyone who wants to make contributions to the SDK or install it from source.
