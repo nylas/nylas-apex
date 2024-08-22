@@ -19,9 +19,9 @@ jobs:
 
       - name: Install Salesforce CLI
         run: |
-          npm install sfdx-cli
-          node_modules/sfdx-cli/bin/run --version
-          node_modules/sfdx-cli/bin/run plugins --core
+          npm install --global sfdx-cli
+          sfdx --version
+          sfdx plugins --core
 
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -38,13 +38,13 @@ jobs:
           fi
 
       - name: Authenticate to Dev Hub
-        run: node_modules/.bin/sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+        run: sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
       - name: Create Scratch Org
-        run: node_modules/.bin/sfdx force:org:create -s -f config/project-scratch-def.json -a MyScratchOrg
+        run: sfdx force:org:create -s -f config/project-scratch-def.json -a MyScratchOrg
 
       - name: Push Source to Scratch Org
-        run: node_modules/.bin/sfdx force:source:push -u MyScratchOrg
+        run: sfdx force:source:push -u MyScratchOrg
 
       - name: Run Apex Tests
-        run: node_modules/.bin/sfdx force:apex:test:run -u MyScratchOrg --wait 10 --resultformat human --codecoverage
+        run: sfdx force:apex:test:run -u MyScratchOrg --wait 10 --resultformat human --codecoverage
