@@ -1,12 +1,9 @@
-name: Salesforce CI
+name: Salesforce CI - Build and Test Package on PR
 
 on:
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch to run the tests on"
-        required: true
-        default: "main"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
