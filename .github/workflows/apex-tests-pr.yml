@@ -38,13 +38,13 @@ jobs:
           fi
 
       - name: Authenticate to Dev Hub
-        run: sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+        run: node_modules/.bin/sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
       - name: Create Scratch Org
-        run: sfdx force:org:create -s -f config/project-scratch-def.json -a MyScratchOrg
+        run: node_modules/.bin/sfdx force:org:create -s -f config/project-scratch-def.json -a MyScratchOrg
 
       - name: Push Source to Scratch Org
-        run: sfdx force:source:push -u MyScratchOrg
+        run: node_modules/.bin/sfdx force:source:push -u MyScratchOrg
 
       - name: Run Apex Tests
-        run: sfdx force:apex:test:run -u MyScratchOrg --wait 10 --resultformat human --codecoverage
+        run: node_modules/.bin/sfdx force:apex:test:run -u MyScratchOrg --wait 10 --resultformat human --codecoverage
