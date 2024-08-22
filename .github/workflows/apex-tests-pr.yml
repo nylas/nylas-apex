@@ -1,7 +1,10 @@
-name: Salesforce CI - Build and Test Package on PR
+name: Salesforce CI - Build and Test Package on Open PR & Merge
 
 on:
   pull_request:
+    branches:
+      - main
+  push:
     branches:
       - main
 
